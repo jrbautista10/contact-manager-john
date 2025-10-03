@@ -2,7 +2,7 @@
     <section class="max-w-xl px-10 mx-auto">
         <h1 class="text-3xl font-bold mb-6">Contact Manager</h1>
         <h2 class="text-xl font-semibold mb-4">Contacts</h2>
-        <ul class="space-y-3">
+        <ul v-if="contacts.length > 0 && contacts" class="space-y-3">
             <li v-for="contact in contacts" :key="contact.id" class="flex items-center space-x-4 p-3 rounded-2xl bg-white shadow-sm">
                 <img
                         v-if="contact.image"
@@ -16,6 +16,15 @@
                 </div>
             </li>
         </ul>
+
+        <div v-else>
+            <div class="rounded-xl bg-gray-100 p-3 text-gray-600 text-sm">
+                No contacts
+            </div>
+            <div class="mt-3 underline text-blue-400 text-sm text-center">
+                <a href="/admin/contact">Click here to add</a>
+            </div>
+        </div>
     </section>
 </template>
 
