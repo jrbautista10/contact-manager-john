@@ -1,6 +1,9 @@
 <template>
     <section class="max-w-xl px-10 mx-auto">
-        <h1 class="text-3xl font-bold mb-6">Contact Manager</h1>
+        <div class="flex justify-between items-center">
+            <h1 class="text-3xl font-bold mb-6">Contact Manager</h1>
+            <a href="/admin/contact" class="underline text-blue-400 text-sm">Go To Admin</a>
+        </div>
         <h2 class="text-xl font-semibold mb-4">Contacts</h2>
         <ul v-if="contacts.length > 0 && contacts" class="space-y-3">
             <li v-for="contact in contacts" :key="contact.id" class="flex items-center space-x-4 p-3 rounded-2xl bg-white shadow-sm">

@@ -11,8 +11,5 @@ export default defineConfig({
         }),
         tailwindcss(),
         vue(),
-    ],
-    server: {
-        https: true,
-    }
+    ]
 });
